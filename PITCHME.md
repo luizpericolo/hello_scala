@@ -2,7 +2,6 @@
 Hello, Scala!
 
 #HSLIDE
-
 ## Agenda
 - Porque Scala
 - Hello world
@@ -10,6 +9,9 @@ Hello, Scala!
 - Variáveis
 - Funções
 - Option
+
+#VSLIDE
+## Agenda
 - Pattern matching
 - Classes
 - Objetos
