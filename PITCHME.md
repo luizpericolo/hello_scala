@@ -1,7 +1,8 @@
 #HSLIDE
-Hello, Scala!
+## Hello, Scala!
 
 #HSLIDE
+
 ## Agenda
 - Porque Scala
 - Hello world
@@ -11,6 +12,7 @@ Hello, Scala!
 - Option
 
 #VSLIDE
+
 ## Agenda
 - Pattern matching
 - Classes
