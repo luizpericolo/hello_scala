@@ -26,8 +26,9 @@
 ## Porque Scala?
 
 - Maior expressividade
+- #somos_Todos_Objetos
 - Menos (código) é mais
-- Faz pensar em PF
+- Paradigma funcional
 
 #VSLIDE
 
@@ -35,7 +36,7 @@
 
 #VSLIDE
 
-## #somosTodosObjetos
+## #somos_Todos_Objetos
 
 #VSLIDE
 
@@ -65,4 +66,4 @@
 
 #VSLIDE
 
-## Faz pensar em PF
+## Paradigma funcional
