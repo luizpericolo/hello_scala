@@ -87,13 +87,29 @@ object HelloWorld extends App {
 
 ## Paradigma funcional
 
+- encoraja o uso de estuturas imutáveis
+- facilita composição de funções
+
+    scala> val srq = Math.pow(_:Double, 2)
+    srq: Double => Double = <function1>
+
+    scala> def powSum(els: List[Double], func: Double => Double): Double = els.map(el => func(el)).sum
+    powSum: (els: List[Double], func: Double => Double)Double
+
+    scala> val sqrSum = powSum(_:List[Double], sqr)
+    sqrSum: List[Double] => Double = <function1>
+
+    scala> sqrSum(List(1, 2, 3, 4))
+    res5: Double = 30.0
+
+
 #VSLIDE
 
 ##  \\o/ REPL \\o/
 
 - tirar dúvidas
 - prototipar idéias
-- mostrar como código scala é mais expressivo do que Java
+- mostrar expressividade de Scala
 
 #VSLIDE
 
