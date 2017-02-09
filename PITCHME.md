@@ -118,7 +118,7 @@ val numbers = Map[Int, String](1 -> "one",2 -> "two")
 
 ## Hello World
 
-#HSLIDE
+#VSLIDE
 
 ## Java vs Scala
 
@@ -138,34 +138,6 @@ object HelloWorld extends App {
 }
 ```
 
-#VSLIDE
-
-## script Scala
-
-```Java
-JavaRDD<String> textFile = sc.textFile("hdfs://...");
-JavaRDD<String> words = textFile.flatMap(new FlatMapFunction<String, String>() {
-  public Iterator<String> call(String s) { return Arrays.asList(s.split(" ")).iterator(); }
-});
-JavaPairRDD<String, Integer> pairs = words.mapToPair(new PairFunction<String, String, Integer>() {
-  public Tuple2<String, Integer> call(String s) { return new Tuple2<String, Integer>(s, 1); }
-});
-JavaPairRDD<String, Integer> counts = pairs.reduceByKey(new Function2<Integer, Integer, Integer>() {
-  public Integer call(Integer a, Integer b) { return a + b; }
-});
-counts.saveAsTextFile("hdfs://...");
-```
-
-```Scala
-val textFile = sc.textFile("hdfs://...")
-val counts = textFile.flatMap(line => line.split(" "))
-                 .map(word => (word, 1))
-                 .reduceByKey(_ + _)
-counts.saveAsTextFile("hdfs://...")
-
-```
-
-
 #HSLIDE
 
 ## Variáveis
@@ -173,6 +145,29 @@ counts.saveAsTextFile("hdfs://...")
 #VSLIDE
 
 ## var - Variáveis mutáveis
+
+    scala> var name:String = "Luiz"
+    name: String = Luiz
+
+    scala> var company = "B2W"
+    company: String = B2W
+
+    scala> println(name, company)
+    (Luiz,B2W)
+
+    scala> company = "BIT Services"
+    company: String = BIT Services
+
+    scala> println(name, company)
+    (Luiz,BIT Services)
+
+    scala> company = 12 //uh-oh
+    <console>:8: error: type mismatch;
+    found   : Int(12)
+    required: String
+       company = 12 //uh-oh
+                 ^
+
 
 #VSLIDE
 
