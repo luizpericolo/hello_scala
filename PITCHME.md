@@ -47,14 +47,14 @@
 public class Shape {
     private String name;
     private Integer numberOfSides;
-    public Shape(String name, Integer numberOfSides) {
+    public Shape(String name, Integer sides) {
         this.name = name;
-        this.numberOfSides = numberOfSides;
+        this.sides = sides;
     }
     public String getName() { return this.name; }
-    public Integer numberOfSides { return this.numberOfSides; }
+    public Integer sides { return this.sides; }
     public void setName(String name) { this.name = name; }
-    public void setNumberOfsides(Integer numberOfsides) { this.numberOfSides = numberOfSides; }
+    public void setNumberOfsides(Integer numberOfsides) { this.sides = sides; }
 }
 Shape square = new Shape("square", 4);
 ```
@@ -63,6 +63,7 @@ Shape square = new Shape("square", 4);
 case class Shape(name: String, numberOfSides: Int)
 val square = Shape("square", 4)
 ```
+#VSLIDE
 
 ## Menos (código) é mais - II
 ```Java
@@ -84,3 +85,7 @@ object HelloWorld extends App {
 #VSLIDE
 
 ## Paradigma funcional
+
+#VSLIDE
+
+## REPL :raised_hands: :clap: :muscle:
