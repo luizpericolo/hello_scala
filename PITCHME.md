@@ -89,7 +89,11 @@ object HelloWorld extends App {
 
 #VSLIDE
 
-##  \\o/ REPL \\o/ &#128079;
+##  \\o/ REPL \\o/
+
+- tirar dúvidas
+- prototipar idéias
+- mostrar como scala é ~~melhor~~ mais expressiva do que Java
 
 #VSLIDE
 
