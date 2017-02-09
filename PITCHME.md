@@ -93,7 +93,7 @@ object HelloWorld extends App {
 
 - tirar dúvidas
 - prototipar idéias
-- mostrar como scala é ~~melhor~~ mais expressiva do que Java
+- mostrar como código scala é mais expressivo do que Java
 
 #VSLIDE
 
