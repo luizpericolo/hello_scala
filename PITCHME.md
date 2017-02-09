@@ -9,15 +9,15 @@
 - Hello world
 - Variáveis
 - Funções
-- Option
-- Pattern matching
+- Classes
+- Objetos
 
 #VSLIDE
 
 ## Agenda
-- Classes
-- Objetos
 - Traits
+- Option
+- Pattern matching
 - Programação funcional
 - DOJO
 
@@ -188,14 +188,6 @@ object HelloWorld extends App {
 
 #HSLIDE
 
-## Option
-
-#HSLIDE
-
-## Pattern matching
-
-#HSLIDE
-
 ## Classes
 
 #VSLIDE
@@ -217,6 +209,14 @@ object HelloWorld extends App {
 #HSLIDE
 
 ## Traits
+
+#HSLIDE
+
+## Option
+
+#HSLIDE
+
+## Pattern matching
 
 #HSLIDE
 
