@@ -64,9 +64,33 @@ Shape square = new Shape("square", 4);
 case class Shape(name: String, sides: Int)
 val square = Shape("square", 4)
 ```
+
 #VSLIDE
 
 ## Menos (código) é mais - II
+
+```Java
+// Java
+public List<int> filterOdd(List<int> numbers) {
+    List<init> oddNumbers = new ArrayList();
+    for (int number : numbers) {
+        if (number % 2 == 1) oddNumbers.add(number);
+    }
+    return oddNumbers
+}
+```
+
+```Scala
+// Scala
+
+def filterOdd(numbers: List[Int]): List[Int] = {
+    numbers.filter(n => n % 2 == 1)
+}
+```
+
+#VSLIDE
+
+## Menos (código) é mais - III
 ```Java
 // Java
 public class HelloWorld {
@@ -89,19 +113,7 @@ object HelloWorld extends App {
 
 - encoraja o uso de estuturas imutáveis
 - facilita composição de funções
-
-
-    scala> val srq = Math.pow(_:Double, 2)
-    srq: Double => Double = <function1>
-
-    scala> def powSum(els: List[Double], func: Double => Double): Double = els.map(el => func(el)).sum
-    powSum: (els: List[Double], func: Double => Double)Double
-
-    scala> val sqrSum = powSum(_:List[Double], sqr)
-    sqrSum: List[Double] => Double = <function1>
-
-    scala> sqrSum(List(1, 2, 3, 4))
-    res5: Double = 30.0
+- aumenta a legibilidade
 
 
 #VSLIDE
