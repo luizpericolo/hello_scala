@@ -88,4 +88,4 @@ object HelloWorld extends App {
 
 #VSLIDE
 
-##  \\o| REPL |o/
+##  \\o/ REPL \\o/
