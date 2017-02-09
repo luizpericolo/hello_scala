@@ -90,6 +90,7 @@ object HelloWorld extends App {
 - encoraja o uso de estuturas imutáveis
 - facilita composição de funções
 
+
     scala> val srq = Math.pow(_:Double, 2)
     srq: Double => Double = <function1>
 
