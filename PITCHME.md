@@ -46,7 +46,7 @@
 // Java
 public class Shape {
     private String name;
-    private Integer numberOfSides;
+    private Integer sides;
     public Shape(String name, Integer sides) {
         this.name = name;
         this.sides = sides;
@@ -54,13 +54,13 @@ public class Shape {
     public String getName() { return this.name; }
     public Integer sides { return this.sides; }
     public void setName(String name) { this.name = name; }
-    public void setNumberOfsides(Integer numberOfsides) { this.sides = sides; }
+    public void setSides(Integer sides) { this.sides = sides; }
 }
 Shape square = new Shape("square", 4);
 ```
 ```Scala
 // Scala
-case class Shape(name: String, numberOfSides: Int)
+case class Shape(name: String, sides: Int)
 val square = Shape("square", 4)
 ```
 #VSLIDE
