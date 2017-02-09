@@ -7,15 +7,14 @@
 ## Agenda
 - Porque Scala
 - Hello world
-- Expressões
 - Variáveis
 - Funções
 - Option
+- Pattern matching
 
 #VSLIDE
 
 ## Agenda
-- Pattern matching
 - Classes
 - Objetos
 - Traits
@@ -134,10 +133,6 @@ object HelloWorld extends App {
 }
 ```
 
-#HSLIDE
-
-## Expressões
-
 
 #HSLIDE
 
@@ -210,6 +205,10 @@ object HelloWorld extends App {
 #VSLIDE
 
 ## Case classes
+
+#VSLIDE
+
+## apply()
 
 #HSLIDE
 
