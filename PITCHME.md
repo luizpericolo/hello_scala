@@ -144,9 +144,53 @@ object HelloWorld extends App {
 
 ## Variáveis
 
+#VSLIDE
+
+## var - Variáveis mutáveis
+
+#VSLIDE
+
+## val - Variáveis imutáveis
+
+#VSLIDE
+
+## lazy - Variáveis "preguiçosas"
+
 #HSLIDE
 
 ## Funções
+
+#VSLIDE
+
+## cbn e cbv - Avaliação de parâmetros
+
+#VSLIDE
+
+## Funções anônimas
+
+#VSLIDE
+
+## Aplicação parcial
+
+#VSLIDE
+
+## Currying
+
+#VSLIDE
+
+## VarArgs
+
+#VSLIDE
+
+## TCO - Tail call optimization
+
+#VSLIDE
+
+## Funções de ordem superior
+
+#VSLIDE
+
+## Closures
 
 #HSLIDE
 
@@ -160,6 +204,14 @@ object HelloWorld extends App {
 
 ## Classes
 
+#VSLIDE
+
+## Classes normais
+
+#VSLIDE
+
+## Case classes
+
 #HSLIDE
 
 ## Objetos
@@ -171,6 +223,26 @@ object HelloWorld extends App {
 #HSLIDE
 
 ## Programação funcional
+
+#VSLIDE
+
+## Vantagens
+
+#VSLIDE
+
+## Funções puras
+
+#VSLIDE
+
+## map / flatMap
+
+#VSLIDE
+
+## filter / fold
+
+#VSLIDE
+
+## reduce
 
 #HSLIDE
 
