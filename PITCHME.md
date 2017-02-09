@@ -89,4 +89,5 @@ object HelloWorld extends App {
 #VSLIDE
 
 ## REPL
+
 :raised_hands: :clap: :muscle:
