@@ -25,24 +25,20 @@
 #HSLIDE
 ## Porque Scala?
 
-- Maior expressividade
-- Tudo é um objeto
-- Menos (código) é mais
+- Menos código = mais expressividade
 - Paradigma funcional
-- TEM REPL
+- \\o/ REPL \\o/
 - Gatling
 
 #VSLIDE
 
 ## Maior expressividade
 
-#VSLIDE
 
-## Tudo é um objeto
 
 #VSLIDE
 
-## Menos (código) é mais - I
+## Menos código = mais expressividade - I
 ```Java
 // Java
 public class Shape {
@@ -67,7 +63,7 @@ val square = Shape("square", 4)
 
 #VSLIDE
 
-## Menos (código) é mais - II
+## Menos código = mais expressividade - II
 
 ```Java
 // Java
@@ -82,31 +78,10 @@ public List<int> filterOdd(List<int> numbers) {
 
 ```Scala
 // Scala
-
 def filterOdd(numbers: List[Int]): List[Int] = {
     numbers.filter(n => n % 2 == 1)
 }
 ```
-
-#VSLIDE
-
-## Menos (código) é mais - III
-```Java
-// Java
-public class HelloWorld {
-    public static void main(String[] args) {
-        // Prints "Hello, World" to the terminal window.
-        System.out.println("Hello, World");
-    }
-}
-```
-```Scala
-// Scala
-object HelloWorld extends App {
-    println("Hello, world");
-}
-```
-
 #VSLIDE
 
 ## Paradigma funcional
@@ -129,3 +104,22 @@ object HelloWorld extends App {
 ## Gatling
 
 - Cenários só podem ser descritos em Scala
+
+#HSLIDE
+
+## Hello World
+```Java
+// Java
+public class HelloWorld {
+    public static void main(String[] args) {
+        // Prints "Hello, World" to the terminal window.
+        System.out.println("Hello, World");
+    }
+}
+```
+```Scala
+// Scala
+object HelloWorld extends App {
+    println("Hello, world");
+}
+```
