@@ -82,23 +82,6 @@ def filterOdd(numbers: List[Int]): List[Int] = {
 ## Menos código = mais expressividade - III
 ```Java
 // Java
-List<int> numbers = new ArrayList<>();
-numbers.add(1);
-numbers.add(1);
-numbers.add(2);
-numbers.add(3);
-(...)
-```
-
-```Scala
-val numbers = List(1, 1, 2, 3);
-```
-
-#VSLIDE
-
-## Menos código = mais expressividade - IV
-```Java
-// Java
 Map<int, String> numbers = new HashMap<>();
 numbers.put(1, "one");
 numbers.add(2, "two");
