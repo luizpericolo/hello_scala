@@ -30,6 +30,7 @@
 - Menos (código) é mais
 - Paradigma funcional
 - TEM REPL
+- Gatling
 
 #VSLIDE
 
@@ -88,4 +89,10 @@ object HelloWorld extends App {
 
 #VSLIDE
 
-##  \\o/ REPL \\o/
+##  \\o/ REPL \\o/ &#128079;
+
+#VSLIDE
+
+## Gatling
+
+- Cenários só podem ser descritos em Scala
