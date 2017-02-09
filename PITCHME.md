@@ -32,12 +32,6 @@
 
 #VSLIDE
 
-## Maior expressividade
-
-
-
-#VSLIDE
-
 ## Menos código = mais expressividade - I
 ```Java
 // Java
@@ -123,3 +117,44 @@ object HelloWorld extends App {
     println("Hello, world");
 }
 ```
+
+#HSLIDE
+
+## Expressões
+
+
+#HSLIDE
+
+## Variáveis
+
+#HSLIDE
+
+## Funções
+
+#HSLIDE
+
+## Option
+
+#HSLIDE
+
+## Pattern matching
+
+#HSLIDE
+
+## Classes
+
+#HSLIDE
+
+## Objetos
+
+#HSLIDE
+
+## Traits
+
+#HSLIDE
+
+## Programação funcional
+
+#HSLIDE
+
+##DOJO
