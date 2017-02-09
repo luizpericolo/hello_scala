@@ -26,7 +26,7 @@
 ## Porque Scala?
 
 - Maior expressividade
-- #somos_Todos_Objetos
+- Tudo é um objeto
 - Menos (código) é mais
 - Paradigma funcional
 
@@ -36,33 +36,34 @@
 
 #VSLIDE
 
-## #somos_Todos_Objetos
+## Tudo é um objeto
 
 #VSLIDE
 
 ## Menos (código) é mais
+```Java
+public class Shape {
+    private String name;
+    private Integer numberOfSides;
 
-    public class Shape {
-        private String name;
-        private Integer numberOfSides;
-
-        public Shape(String name, Integer numberOfSides) {
-            this.name = name;
-            this.numberOfSides = numberOfSides;
-        }
-
-        public String getName() { return this.name; }
-
-        public Integer numberOfSides { return this.numberOfSides; }
-
-        public void setName(String name) { this.name = name; }
-
-        public void setNumberOfsides(Integer numberOfsides) { this.numberOfSides = numberOfSides; }
+    public Shape(String name, Integer numberOfSides) {
+        this.name = name;
+        this.numberOfSides = numberOfSides;
     }
 
-    // vs
+    public String getName() { return this.name; }
 
-    case class Shape(name: String, numberOfSides: Int)
+    public Integer numberOfSides { return this.numberOfSides; }
+
+    public void setName(String name) { this.name = name; }
+
+    public void setNumberOfsides(Integer numberOfsides) { this.numberOfSides = numberOfSides; }
+}
+```
+    // vs
+```Scala
+case class Shape(name: String, numberOfSides: Int)
+```
 
 #VSLIDE
 
