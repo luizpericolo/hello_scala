@@ -76,6 +76,40 @@ def filterOdd(numbers: List[Int]): List[Int] = {
     numbers.filter(n => n % 2 == 1)
 }
 ```
+
+#VSLIDE
+
+## Menos código = mais expressividade - III
+```Java
+// Java
+List<int> numbers = new ArrayList<>();
+numbers.add(1);
+numbers.add(1);
+numbers.add(2);
+numbers.add(3);
+(...)
+```
+
+```Scala
+val numbers = List(1, 1, 2, 3);
+```
+
+#VSLIDE
+
+## Menos código = mais expressividade - IV
+```Java
+// Java
+Map<int, String> numbers = new HashMap<>();
+numbers.put(1, "one");
+numbers.add(2, "two");
+numbers.add(3, "three");
+numbers.add(4, "four");
+(...)
+```
+
+```Scala
+val numbers = Map[Int, String](1 -> "one", 2 -> "two", 3 -> "three", 4 -> "four");
+```
 #VSLIDE
 
 ## Paradigma funcional
