@@ -90,7 +90,7 @@ numbers.put(3, "three");
 ```
 
 ```Scala
-val numbers = Map[Int, String](1 -> "one",2 -> "two", ...);
+val numbers = Map[Int, String](1 -> "one",2 -> "two");
 ```
 #VSLIDE
 
