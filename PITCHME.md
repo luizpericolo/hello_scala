@@ -84,14 +84,16 @@ def filterOdd(numbers: List[Int]): List[Int] = {
 // Java
 Map<int, String> numbers = new HashMap<>();
 numbers.put(1, "one");
-numbers.add(2, "two");
-numbers.add(3, "three");
-numbers.add(4, "four");
+numbers.put(2, "two");
+numbers.put(3, "three");
 (...)
 ```
 
 ```Scala
-val numbers = Map[Int, String](1 -> "one", 2 -> "two", 3 -> "three", 4 -> "four");
+val numbers = Map[Int, String](
+                1 -> "one",
+                2 -> "two",
+                3 -> "three");
 ```
 #VSLIDE
 
