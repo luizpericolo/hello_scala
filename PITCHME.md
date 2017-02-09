@@ -46,15 +46,15 @@
 // Java
 public class Shape {
     private String name;
-    private Integer sides;
-    public Shape(String name, Integer sides) {
+    private int sides;
+    public Shape(String name, int sides) {
         this.name = name;
         this.sides = sides;
     }
     public String getName() { return this.name; }
-    public Integer sides { return this.sides; }
+    public int getSides() { return this.sides; }
     public void setName(String name) { this.name = name; }
-    public void setSides(Integer sides) { this.sides = sides; }
+    public void setSides(int sides) { this.sides = sides; }
 }
 Shape square = new Shape("square", 4);
 ```
