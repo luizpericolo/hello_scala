@@ -324,7 +324,47 @@ Difere de **currying** já que a função resultado pode receber mais de um valo
 
 #VSLIDE
 
+## Tail Recursion
+
+Computação não precisa usar a pilha
+
+    scala> def fact(n: Int): Int = {
+         | n match {
+         | case 0 => 1
+         | case x => x * fact(x - 1)
+         | }
+         | }
+    fact: (n: Int)Int
+
+    fact(3)
+    3 * fact(2)
+    3 * 2 * fact(1)
+    3 * 2 * 1
+
+
+#VSLIDE
+
 ## TCO - Tail call optimization
+
+O compilador otimiza funções que sejam **tail recursive** em tempo de compilação.
+
+    scala> def factTO(n: Int, total: Int): Int = {
+        n match {
+            case 0 => total
+            case x => factTO(x - 1, total * n)
+        }
+    }
+    factTO: (n: Int, total: Int)Int
+
+    scala> def fact(n: Int): Int = factTO(n, 1)
+    fact: (n: Int)Int
+
+
+    fact(3)
+    fact(2, 3)
+    fact(1, 6)
+    6
+
 
 #VSLIDE
 
@@ -357,6 +397,25 @@ Uma função que recebe uma função como parâmetro ou retorna uma função é 
 #VSLIDE
 
 ## Closures
+
+Funções com variáveis que não fazem parte do seu contexto interno.  
+Essas variáveis são avaliadas sempre que a função é chamada.
+
+    scala> var more = 1
+    more: Int = 1
+
+    scala> val addMore: Int => Int = x => x + more
+    addMore: Int => Int = <function1>
+
+    scala> addMore(10)
+    res0: Int = 11
+
+    scala> more = 12
+    more: Int = 12
+
+    scala> addMore(10)
+    res1: Int = 22
+
 
 #HSLIDE
 
