@@ -185,8 +185,8 @@ object HelloWorld extends App {
 ## lazy - Variáveis "preguiçosas"
 
     scala> lazy val answer = {
-     | println("expensive computation...")
-     | 42
+     |  println("expensive computation...")
+     |  42
      | }
 
     answer: Int = <lazy>
@@ -204,7 +204,9 @@ object HelloWorld extends App {
 
 ## Definição
 
-    scala> def palindrome(word: String): Boolean = word.reverse == word
+    scala> def palindrome(word: String): Boolean = {
+     |  word.reverse == word
+     | }
     palindrome: (word: String)Boolean
 
     scala> palindrome("dog")
@@ -244,7 +246,9 @@ object HelloWorld extends App {
 
 ## Funções anônimas
 
-    scala> def filterInts(ints: List[Int], f: Int => Boolean) = ints.filter(f)
+    scala> def filterInts(ints: List[Int], f: Int => Boolean) = {
+     |  ints.filter(f)
+     | }
     filterInts: (ints: List[Int], f: Int => Boolean)List[Int]
 
     scala> val ints = 1 to 8 toList
@@ -258,7 +262,7 @@ object HelloWorld extends App {
 
 ## Currying
 
-- Decompõe uma função de **n** variáveis como uma composição de **n** funções de 1 variável
+Decompõe uma função de **n** variáveis como uma composição de **n** funções de 1 variável
 
     scala> def y(a: Int, b: Int, x: Int): Int = a * x + b
     y: (a: Int, b: Int, x: Int)Int
@@ -279,7 +283,7 @@ object HelloWorld extends App {
 
 ## Aplicação parcial
 
-- Difere de **currying** já que a função resultado pode receber mais de um valor
+Difere de **currying** já que a função resultado pode receber mais de um valor
 
     scala> val wrapContent(prefix: String, content: String, suffix: String) = prefix + content + suffix
     wrapContent: (prefix: String, content: String, suffix: String)String
