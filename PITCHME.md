@@ -285,7 +285,9 @@ Decompõe uma função de **n** variáveis como uma composição de **n** funç�
 
 Difere de **currying** já que a função resultado pode receber mais de um valor
 
-    scala> val wrapContent(prefix: String, content: String, suffix: String) = prefix + content + suffix
+    scala> val wrapContent(prefix: String, content: String, suffix: String) = {
+        |   prefix + content + suffix
+        | }
     wrapContent: (prefix: String, content: String, suffix: String)String
     scala> val wrapSpan = wrapContent("<span>", _: String, "</span>")
     wrapSpan: String => String = <function1>
@@ -313,6 +315,9 @@ Difere de **currying** já que a função resultado pode receber mais de um valo
 
     scala> printInts(2 to 4 toList :_*)
     List(2, 3, 4)
+    scala> printInts(1, 1, 2, 3, 5, 8)
+    WrappedArray(1, 1, 2, 3, 5, 8)
+
 
 #VSLIDE
 
@@ -321,6 +326,30 @@ Difere de **currying** já que a função resultado pode receber mais de um valo
 #VSLIDE
 
 ## Funções de ordem superior
+
+Uma função que recebe uma função como parâmetro ou retorna uma função é dita **função de ordem superior**
+
+    scala> def calculateTip(value: Double, percentage: Double) = {
+         | value * percentage / 100
+         | }
+    calculateTip: (value: Double, percentage: Double)Double
+
+    scala> calculateTip(100, 10)
+    res0: Double = 10.0
+
+    scala> val calculateBrTip = calculateTip(_:Double, 10)
+    calculateBrTip: Double => Double = <function1>
+
+    scala> def getBillTotal(value: Double, tipF: Double => Double) = {
+     | value + tipF(value)
+     | }
+     getBillTotal: (value: Double, tipF: Double => Double)Double
+
+     scala> getBillTotal(100, calculateBrTip)
+     res1: Double = 110.0
+
+
+
 
 #VSLIDE
 
