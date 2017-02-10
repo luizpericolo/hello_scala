@@ -425,16 +425,6 @@ Essas variáveis são avaliadas sempre que a função é chamada.
 
 ## Classes normais
 
-    scala> class Point(xc: Int, yc: Int) {
-         | var x: Int = xc
-         | var y: Int = yc
-         | override def toString() = s"($x,$y)"
-         | }
-    defined class Point
-
-scala> val origin = new Point(0, 0)
-origin: Point = (0,0)
-
 #VSLIDE
 
 ## Case classes
@@ -443,11 +433,13 @@ origin: Point = (0,0)
 
 ## apply()
 
-Método 
-
 #HSLIDE
 
 ## Objetos
+
+#VSLIDE
+
+## Objetos - Singletons
 
 #VSLIDE
 
