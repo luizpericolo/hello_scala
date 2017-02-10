@@ -26,7 +26,7 @@
 - Menos código = mais expressividade
 - Paradigma funcional
 - \\o/ REPL \\o/
-- Gatling
+- Gatling e Spark
 
 #VSLIDE
 
@@ -109,9 +109,12 @@ val numbers = Map[Int, String](1 -> "one",2 -> "two")
 
 #VSLIDE
 
-## Gatling
+## Gatling e Spark
 
-- Cenários só podem ser descritos em Scala
+- Cenários do Gatling só podem ser descritos em Scala
+- Computações do Spark podem ser mais brevemente descritos em Scala
+
+
 
 #HSLIDE
 
