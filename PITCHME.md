@@ -18,7 +18,6 @@
 - Traits
 - Option
 - Pattern matching
-- Programação funcional
 - DOJO
 
 #HSLIDE
@@ -161,11 +160,11 @@ object HelloWorld extends App {
     scala> println(name, company)
     (Luiz,BIT Services)
 
-    scala> company = 12 //uh-oh
+    scala> company = 12
     <console>:8: error: type mismatch;
     found   : Int(12)
     required: String
-       company = 12 //uh-oh
+       company = 12
                  ^
 
 
@@ -173,9 +172,29 @@ object HelloWorld extends App {
 
 ## val - Variáveis imutáveis
 
+    scala> val team = "API"
+    team: String = API
+
+    scala> team = "Mobile"
+    <console>:8: error: reassignment to val
+       team = "Mobile"
+
+
 #VSLIDE
 
 ## lazy - Variáveis "preguiçosas"
+
+    scala> lazy val answer = {
+     | println("expensive computation...")
+     | 42
+     | }
+
+    answer: Int = <lazy>
+
+    scala> answer
+    expensive computation...
+    res0: Int = 42
+
 
 #HSLIDE
 
@@ -183,23 +202,113 @@ object HelloWorld extends App {
 
 #VSLIDE
 
-## cbn e cbv - Avaliação de parâmetros
+## Definição
+
+    scala> def palindrome(word: String): Boolean = word.reverse == word
+    palindrome: (word: String)Boolean
+
+    scala> palindrome("dog")
+    res0: Boolean = false
+
+    scala> palindrome("level")
+    res1: Boolean = true
+
+    scala> palindrome("Racecar")
+    res2: Boolean = false
+
+
+#VSLIDE
+
+## São objetos
+
+    scala> val odd = (i: Int) => { i % 2 == 0 }
+    odd: Int => Boolean = <function1>
+
+    scala> odd(2)
+    res0: Boolean = true
+
+    scala> odd(5)
+    res1: Boolean = false
+
+    scala> val even: Int => Boolean = i => i % 2 != 0
+    even: Int => Boolean = <function1>
+
+    scala> even(10)
+    res2: Boolean = false
+
+    scala> even(1)
+    res3: Boolean = true
+
 
 #VSLIDE
 
 ## Funções anônimas
 
-#VSLIDE
+    scala> def filterInts(ints: List[Int], f: Int => Boolean) = ints.filter(f)
+    filterInts: (ints: List[Int], f: Int => Boolean)List[Int]
 
-## Aplicação parcial
+    scala> val ints = 1 to 8 toList
+    ints: List[Int] = List(1, 2, 3, 4, 5, 6, 7, 8)
+
+    scala> val multiple2 = filterInts(ints, x => x % 2 == 0)
+    multiple2: List[Int] = List(2, 4, 6, 8)
+
 
 #VSLIDE
 
 ## Currying
 
+- Decompõe uma função de **n** variáveis como uma composição de **n** funções de 1 variável
+
+    scala> def y(a: Int, b: Int, x: Int): Int = a * x + b
+    y: (a: Int, b: Int, x: Int)Int
+    scala> val curriedY = y _ curried
+    curriedY: Int => (Int => (Int => Int)) = <function1>
+    scala> def curriedY2(a: Int)(b: Int)(x: Int): Int = a * x + b
+    curriedY2: (a: Int)(b: Int)(x: Int)Int
+    scala> val identity = curriedY(1)(0)
+    identity: Int => Int = <function1>
+    scala> val identity2 = curriedY2(1)(0)_
+    identity2: Int => Int = <function1>
+    scala> identity(10)
+    res0: Int = 10
+    scala> identity2(20)
+    res1: Int = 20
+
+#VSLIDE
+
+## Aplicação parcial
+
+- Difere de **currying** já que a função resultado pode receber mais de um valor
+
+    scala> val wrapContent(prefix: String, content: String, suffix: String) = prefix + content + suffix
+    wrapContent: (prefix: String, content: String, suffix: String)String
+    scala> val wrapSpan = wrapContent("<span>", _: String, "</span>")
+    wrapSpan: String => String = <function1>
+    scala> wrapSpan("spam")
+    res0: String = <span>spam</span>
+    scala> val wrapH1 = wrapContent("# ", _:String, "")
+    wrapH1: String => String = <function1>
+    wrapH1("slide title")
+    scala> wrapH1("project title")
+    res1: String = # project title
+
 #VSLIDE
 
 ## VarArgs
+
+    scala> def printInts(nums:Int*) = println(nums)
+    printInts: (nums: Int*)Unit
+
+    scala> printInts(2 to 4 toList)
+    <console>:9: error: type mismatch;
+     found   : List[Int]
+     required: Int
+                  printInts(2 to 4 toList)
+                                   ^
+
+    scala> printInts(2 to 4 toList :_*)
+    List(2, 3, 4)
 
 #VSLIDE
 
@@ -244,30 +353,6 @@ object HelloWorld extends App {
 #HSLIDE
 
 ## Pattern matching
-
-#HSLIDE
-
-## Programação funcional
-
-#VSLIDE
-
-## Vantagens
-
-#VSLIDE
-
-## Funções puras
-
-#VSLIDE
-
-## map / flatMap
-
-#VSLIDE
-
-## filter / fold
-
-#VSLIDE
-
-## reduce
 
 #HSLIDE
 
