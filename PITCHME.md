@@ -285,17 +285,20 @@ Decompõe uma função de **n** variáveis como uma composição de **n** funç�
 
 Difere de **currying** já que a função resultado pode receber mais de um valor
 
-    scala> val wrapContent(prefix: String, content: String, suffix: String) = {
-        |   prefix + content + suffix
+    scala> val wrapContent(pre: String, content: String, suf: String) = {
+        |   pre + content + suf
         | }
-    wrapContent: (prefix: String, content: String, suffix: String)String
+    wrapContent: (pre: String, content: String, suf: String)String
+
     scala> val wrapSpan = wrapContent("<span>", _: String, "</span>")
     wrapSpan: String => String = <function1>
+
     scala> wrapSpan("spam")
     res0: String = <span>spam</span>
+
     scala> val wrapH1 = wrapContent("# ", _:String, "")
     wrapH1: String => String = <function1>
-    wrapH1("slide title")
+
     scala> wrapH1("project title")
     res1: String = # project title
 
